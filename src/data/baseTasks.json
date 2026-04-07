@@ -1,0 +1,222 @@
+[
+  {
+    "id": 101,
+    "projectId": 1,
+    "title": "Criar tela de login",
+    "description": "Desenvolver a interface inicial de autenticacao.",
+    "status": "Concluída",
+    "priority": "Alta",
+    "assignee": "Joao Pedro",
+    "dueDate": "2026-04-05",
+    "estimatedHours": 6
+  },
+  {
+    "id": 102,
+    "projectId": 1,
+    "title": "Implementar listagem de solicitacoes",
+    "description": "Exibir dados vindos da API em formato de tabela.",
+    "status": "Em andamento",
+    "priority": "Alta",
+    "assignee": "Ana Souza",
+    "dueDate": "2026-04-12",
+    "estimatedHours": 10
+  },
+  {
+    "id": 103,
+    "projectId": 1,
+    "title": "Configurar pagina de detalhe",
+    "description": "Criar visualizacao detalhada de cada solicitacao.",
+    "status": "A fazer",
+    "priority": "Média",
+    "assignee": "Carlos Lima",
+    "dueDate": "2026-04-18",
+    "estimatedHours": 8
+  },
+  {
+    "id": 104,
+    "projectId": 1,
+    "title": "Validar formulario de cadastro",
+    "description": "Adicionar validacoes de campos obrigatorios e feedback de erro.",
+    "status": "Em revisão",
+    "priority": "Média",
+    "assignee": "Juliana Pires",
+    "dueDate": "2026-04-14",
+    "estimatedHours": 5
+  },
+  {
+    "id": 105,
+    "projectId": 2,
+    "title": "Mapear metricas do dashboard",
+    "description": "Definir indicadores principais e componentes da tela inicial.",
+    "status": "A fazer",
+    "priority": "Alta",
+    "assignee": "Gabriel Melo",
+    "dueDate": "2026-04-09",
+    "estimatedHours": 4
+  },
+  {
+    "id": 106,
+    "projectId": 2,
+    "title": "Criar cards de KPI",
+    "description": "Montar cards reutilizaveis para exibicao de metricas.",
+    "status": "Em andamento",
+    "priority": "Alta",
+    "assignee": "Luiza Gomes",
+    "dueDate": "2026-04-16",
+    "estimatedHours": 7
+  },
+  {
+    "id": 107,
+    "projectId": 2,
+    "title": "Implementar filtro por periodo",
+    "description": "Permitir alternancia entre visoes semanais e mensais.",
+    "status": "A fazer",
+    "priority": "Média",
+    "assignee": "Pedro Henrique",
+    "dueDate": "2026-04-22",
+    "estimatedHours": 6
+  },
+  {
+    "id": 108,
+    "projectId": 2,
+    "title": "Revisar identidade visual",
+    "description": "Ajustar tipografia, espacamentos e hierarquia do dashboard.",
+    "status": "Em revisão",
+    "priority": "Baixa",
+    "assignee": "Marina Freitas",
+    "dueDate": "2026-04-11",
+    "estimatedHours": 3
+  },
+  {
+    "id": 109,
+    "projectId": 3,
+    "title": "Desenhar fluxo de agendamento",
+    "description": "Estruturar jornada de marcacao de consulta em alta fidelidade.",
+    "status": "Em andamento",
+    "priority": "Alta",
+    "assignee": "Camila Nogueira",
+    "dueDate": "2026-04-10",
+    "estimatedHours": 9
+  },
+  {
+    "id": 110,
+    "projectId": 3,
+    "title": "Criar tela de confirmacao",
+    "description": "Montar tela final com resumo e acoes de confirmacao.",
+    "status": "Concluída",
+    "priority": "Baixa",
+    "assignee": "Thiago Lopes",
+    "dueDate": "2026-04-04",
+    "estimatedHours": 4
+  },
+  {
+    "id": 111,
+    "projectId": 3,
+    "title": "Integrar calendario com agenda",
+    "description": "Exibir disponibilidade dinamica dos profissionais.",
+    "status": "A fazer",
+    "priority": "Alta",
+    "assignee": "Renata Maia",
+    "dueDate": "2026-04-19",
+    "estimatedHours": 11
+  },
+  {
+    "id": 112,
+    "projectId": 3,
+    "title": "Refatorar componentes do formulario",
+    "description": "Padronizar componentes e reduzir duplicacao de codigo.",
+    "status": "Em andamento",
+    "priority": "Média",
+    "assignee": "Bruno Castro",
+    "dueDate": "2026-04-25",
+    "estimatedHours": 8
+  },
+  {
+    "id": 113,
+    "projectId": 4,
+    "title": "Ajustar pipeline de recrutamento",
+    "description": "Revisar colunas e estados do funil de candidatos.",
+    "status": "Em revisão",
+    "priority": "Alta",
+    "assignee": "Patricia Silva",
+    "dueDate": "2026-04-08",
+    "estimatedHours": 5
+  },
+  {
+    "id": 114,
+    "projectId": 4,
+    "title": "Criar painel de onboarding",
+    "description": "Exibir etapas de onboarding e progresso de cada colaborador.",
+    "status": "Em andamento",
+    "priority": "Média",
+    "assignee": "Vinicius Araujo",
+    "dueDate": "2026-04-17",
+    "estimatedHours": 7
+  },
+  {
+    "id": 115,
+    "projectId": 4,
+    "title": "Revisar regras de permissao",
+    "description": "Validar acessos por perfil nas telas internas.",
+    "status": "A fazer",
+    "priority": "Baixa",
+    "assignee": "Aline Torres",
+    "dueDate": "2026-04-21",
+    "estimatedHours": 6
+  },
+  {
+    "id": 116,
+    "projectId": 4,
+    "title": "Documentar fluxo de avaliacao",
+    "description": "Consolidar regras de negocio e criterios de performance.",
+    "status": "Concluída",
+    "priority": "Média",
+    "assignee": "Felipe Dias",
+    "dueDate": "2026-04-02",
+    "estimatedHours": 4
+  },
+  {
+    "id": 117,
+    "projectId": 5,
+    "title": "Migrar base de conhecimento",
+    "description": "Organizar artigos e categorias da plataforma de suporte.",
+    "status": "Concluída",
+    "priority": "Baixa",
+    "assignee": "Laura Mendes",
+    "dueDate": "2026-03-29",
+    "estimatedHours": 6
+  },
+  {
+    "id": 118,
+    "projectId": 5,
+    "title": "Monitorar SLAs criticos",
+    "description": "Implementar cards com chamados fora do prazo e risco de atraso.",
+    "status": "Em andamento",
+    "priority": "Alta",
+    "assignee": "Diego Ramos",
+    "dueDate": "2026-04-03",
+    "estimatedHours": 9
+  },
+  {
+    "id": 119,
+    "projectId": 5,
+    "title": "Criar pagina de detalhe do chamado",
+    "description": "Permitir visualizacao do historico completo de atendimento.",
+    "status": "A fazer",
+    "priority": "Média",
+    "assignee": "Helena Barros",
+    "dueDate": "2026-04-23",
+    "estimatedHours": 8
+  },
+  {
+    "id": 120,
+    "projectId": 5,
+    "title": "Ajustar ordenacao da fila",
+    "description": "Refinar criterios de prioridade dos chamados.",
+    "status": "Em andamento",
+    "priority": "Alta",
+    "assignee": "Eduardo Neves",
+    "dueDate": "2026-04-13",
+    "estimatedHours": 5
+  }
+]

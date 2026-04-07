@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "name": "Portal do Cliente",
+    "client": "Empresa Alpha",
+    "description": "Criacao de um portal para acompanhamento de solicitacoes e historico do cliente.",
+    "status": "Em andamento",
+    "progress": 65,
+    "dueDate": "2026-04-20",
+    "owner": "Mariana Costa",
+    "priority": "Alta"
+  },
+  {
+    "id": 2,
+    "name": "Dashboard Comercial",
+    "client": "Empresa Beta",
+    "description": "Dashboard para acompanhamento de vendas, metas e indicadores comerciais.",
+    "status": "Planejamento",
+    "progress": 20,
+    "dueDate": "2026-05-10",
+    "owner": "Lucas Lima",
+    "priority": "Média"
+  },
+  {
+    "id": 3,
+    "name": "App de Agendamentos",
+    "client": "Clinica Central",
+    "description": "Aplicacao para agendar consultas e gerenciar disponibilidade dos profissionais.",
+    "status": "Em andamento",
+    "progress": 52,
+    "dueDate": "2026-04-28",
+    "owner": "Beatriz Rocha",
+    "priority": "Alta"
+  },
+  {
+    "id": 4,
+    "name": "Sistema Interno de RH",
+    "client": "Grupo Horizonte",
+    "description": "Sistema interno para recrutamento, onboarding e acompanhamento de performance.",
+    "status": "Em revisão",
+    "progress": 85,
+    "dueDate": "2026-04-15",
+    "owner": "Fernanda Alves",
+    "priority": "Média"
+  },
+  {
+    "id": 5,
+    "name": "Plataforma de Suporte",
+    "client": "Tech Support Co.",
+    "description": "Plataforma para abertura de chamados, base de conhecimento e SLA de atendimento.",
+    "status": "Concluído",
+    "progress": 100,
+    "dueDate": "2026-03-30",
+    "owner": "Rafael Martins",
+    "priority": "Baixa"
+  }
+]
