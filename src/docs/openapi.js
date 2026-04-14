@@ -147,6 +147,71 @@ const openApiSpec = {
           "priority"
         ]
       },
+      CreateProjectRequest: {
+        type: "object",
+        properties: {
+          name: {
+            type: "string",
+            example: "Central de Operacoes"
+          },
+          client: {
+            type: "string",
+            example: "Empresa Zeta"
+          },
+          description: {
+            type: "string",
+            example: "Painel para acompanhar ocorrencias e indicadores operacionais."
+          },
+          status: {
+            type: "string",
+            enum: PROJECT_STATUSES,
+            example: PROJECT_STATUSES[0]
+          },
+          progress: {
+            type: "integer",
+            minimum: 0,
+            maximum: 100,
+            example: 10
+          },
+          dueDate: {
+            type: "string",
+            format: "date",
+            example: "2026-05-12"
+          },
+          owner: {
+            type: "string",
+            example: "Patricia Lima"
+          },
+          priority: {
+            type: "string",
+            enum: PRIORITIES,
+            example: PRIORITIES[2]
+          }
+        },
+        required: [
+          "name",
+          "client",
+          "description",
+          "status",
+          "progress",
+          "dueDate",
+          "owner",
+          "priority"
+        ]
+      },
+      CreateProjectResponse: {
+        type: "object",
+        properties: {
+          message: {
+            type: "string",
+            example: "Projeto criado com sucesso."
+          },
+          project: {
+            $ref: "#/components/schemas/Project"
+          }
+        },
+        required: ["message", "project"]
+      },
       Task: {
         type: "object",
         properties: {
@@ -301,6 +366,16 @@ const openApiSpec = {
         },
         required: ["message", "task"]
       },
+      DeleteResponse: {
+        type: "object",
+        properties: {
+          message: {
+            type: "string",
+            example: "Recurso removido com sucesso."
+          }
+        },
+        required: ["message"]
+      },
       Dashboard: {
         type: "object",
         properties: {
@@ -415,6 +490,62 @@ const openApiSpec = {
             }
           }
         }
+      },
+      post: {
+        tags: ["Projects"],
+        summary: "Cria um novo projeto",
+        requestBody: {
+          required: true,
+          content: {
+            "application/json": {
+              schema: {
+                $ref: "#/components/schemas/CreateProjectRequest"
+              }
+            }
+          }
+        },
+        responses: {
+          201: {
+            description: "Projeto criado com sucesso",
+            content: {
+              "application/json": {
+                schema: {
+                  $ref: "#/components/schemas/CreateProjectResponse"
+                }
+              }
+            }
+          },
+          400: {
+            description: "Payload invalido",
+            content: {
+              "application/json": {
+                schema: {
+                  $ref: "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          401: {
+            description: "Header x-team-token nao informado",
+            content: {
+              "application/json": {
+                schema: {
+                  $ref: "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          403: {
+            description: "Token de equipe invalido",
+            content: {
+              "application/json": {
+                schema: {
+                  $ref: "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
       }
     },
     "/projects/{id}": {
@@ -439,6 +570,63 @@ const openApiSpec = {
               "application/json": {
                 schema: {
                   $ref: "#/components/schemas/Project"
+                }
+              }
+            }
+          },
+          401: {
+            description: "Header x-team-token nao informado",
+            content: {
+              "application/json": {
+                schema: {
+                  $ref: "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          403: {
+            description: "Token de equipe invalido",
+            content: {
+              "application/json": {
+                schema: {
+                  $ref: "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          404: {
+            description: "Projeto nao encontrado",
+            content: {
+              "application/json": {
+                schema: {
+                  $ref: "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      delete: {
+        tags: ["Projects"],
+        summary: "Remove um projeto pelo id",
+        parameters: [
+          {
+            name: "id",
+            in: "path",
+            required: true,
+            schema: {
+              type: "integer"
+            },
+            description: "Identificador do projeto"
+          }
+        ],
+        responses: {
+          200: {
+            description: "Projeto removido com sucesso",
+            content: {
+              "application/json": {
+                schema: {
+                  $ref: "#/components/schemas/DeleteResponse"
                 }
               }
             }
@@ -646,6 +834,63 @@ const openApiSpec = {
               "application/json": {
                 schema: {
                   $ref: "#/components/schemas/Task"
+                }
+              }
+            }
+          },
+          401: {
+            description: "Header x-team-token nao informado",
+            content: {
+              "application/json": {
+                schema: {
+                  $ref: "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          403: {
+            description: "Token de equipe invalido",
+            content: {
+              "application/json": {
+                schema: {
+                  $ref: "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          404: {
+            description: "Tarefa nao encontrada",
+            content: {
+              "application/json": {
+                schema: {
+                  $ref: "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      delete: {
+        tags: ["Tasks"],
+        summary: "Remove uma tarefa pelo id",
+        parameters: [
+          {
+            name: "id",
+            in: "path",
+            required: true,
+            schema: {
+              type: "integer"
+            },
+            description: "Identificador da tarefa"
+          }
+        ],
+        responses: {
+          200: {
+            description: "Tarefa removida com sucesso",
+            content: {
+              "application/json": {
+                schema: {
+                  $ref: "#/components/schemas/DeleteResponse"
                 }
               }
             }

@@ -6,6 +6,7 @@ const {
 } = require("../utils/validators");
 const {
   createTask,
+  deleteTask,
   getTaskById,
   listTasks,
   updateTaskStatus
@@ -49,6 +50,17 @@ router.post("/", (req, res) => {
     message: "Tarefa criada com sucesso.",
     task: result.task
   });
+});
+
+router.delete("/:id", (req, res) => {
+  const taskId = Number(req.params.id);
+  const result = deleteTask(req.teamId, taskId);
+
+  if (result.error) {
+    return res.status(result.error.status).json({ message: result.error.message });
+  }
+
+  return res.status(200).json({ message: "Tarefa removida com sucesso." });
 });
 
 router.patch("/:id/status", (req, res) => {

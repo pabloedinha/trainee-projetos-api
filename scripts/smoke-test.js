@@ -37,6 +37,9 @@ async function run() {
     assert.ok(response.data.paths["/projects"]);
     assert.ok(response.data.paths["/tasks"]);
     assert.ok(response.data.paths["/dashboard"]);
+    assert.ok(response.data.paths["/projects"].post);
+    assert.ok(response.data.paths["/projects/{id}"].delete);
+    assert.ok(response.data.paths["/tasks/{id}"].delete);
 
     response = await request(baseUrl, "/docs/");
     assert.equal(response.status, 200);
@@ -163,6 +166,100 @@ async function run() {
       headers: { "x-team-token": SECOND_TEAM_TOKEN }
     });
     assert.equal(response.status, 404);
+
+    response = await request(baseUrl, "/projects", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "x-team-token": VALID_TOKEN
+      },
+      body: JSON.stringify({
+        name: "Central de Operacoes",
+        client: "Empresa Zeta",
+        description: "Painel para acompanhar ocorrencias e indicadores operacionais.",
+        status: "Planejamento",
+        progress: 10,
+        dueDate: "2026-05-12",
+        owner: "Patricia Lima",
+        priority: "Alta"
+      })
+    });
+    assert.equal(response.status, 201);
+    assert.equal(response.data.project.id, 6);
+
+    response = await request(baseUrl, "/tasks", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "x-team-token": VALID_TOKEN
+      },
+      body: JSON.stringify({
+        projectId: 6,
+        title: "Montar backlog inicial",
+        description: "Estruturar as primeiras entregas do projeto.",
+        status: "A fazer",
+        priority: "Alta",
+        assignee: "Bianca Alves",
+        dueDate: "2026-04-25",
+        estimatedHours: 5
+      })
+    });
+    assert.equal(response.status, 201);
+    assert.equal(response.data.task.id, 122);
+
+    response = await request(baseUrl, "/tasks/122", {
+      method: "DELETE",
+      headers: { "x-team-token": VALID_TOKEN }
+    });
+    assert.equal(response.status, 200);
+
+    response = await request(baseUrl, "/tasks/122", {
+      headers: { "x-team-token": VALID_TOKEN }
+    });
+    assert.equal(response.status, 404);
+
+    response = await request(baseUrl, "/tasks", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "x-team-token": VALID_TOKEN
+      },
+      body: JSON.stringify({
+        projectId: 6,
+        title: "Definir indicadores",
+        description: "Selecionar as metricas principais da operacao.",
+        status: "A fazer",
+        priority: "Baixa",
+        assignee: "Caio Rocha",
+        dueDate: "2026-04-28",
+        estimatedHours: 3
+      })
+    });
+    assert.equal(response.status, 201);
+    assert.equal(response.data.task.id, 123);
+
+    response = await request(baseUrl, "/projects/6", {
+      method: "DELETE",
+      headers: { "x-team-token": VALID_TOKEN }
+    });
+    assert.equal(response.status, 200);
+
+    response = await request(baseUrl, "/projects/6", {
+      headers: { "x-team-token": VALID_TOKEN }
+    });
+    assert.equal(response.status, 404);
+
+    response = await request(baseUrl, "/tasks/123", {
+      headers: { "x-team-token": VALID_TOKEN }
+    });
+    assert.equal(response.status, 404);
+
+    response = await request(baseUrl, "/dashboard", {
+      headers: { "x-team-token": VALID_TOKEN }
+    });
+    assert.equal(response.status, 200);
+    assert.equal(response.data.totalProjects, 5);
+    assert.equal(response.data.totalTasks, 21);
 
     console.log("Smoke tests executados com sucesso.");
   } finally {

@@ -89,8 +89,29 @@ function updateTaskStatus(teamId, taskId, status) {
   };
 }
 
+function deleteTask(teamId, taskId) {
+  const state = getTeamState(teamId);
+  const taskIndex = state.tasks.findIndex((task) => task.id === taskId);
+
+  if (taskIndex === -1) {
+    return {
+      error: {
+        message: "Tarefa nao encontrada.",
+        status: 404
+      }
+    };
+  }
+
+  state.tasks.splice(taskIndex, 1);
+
+  return {
+    success: true
+  };
+}
+
 module.exports = {
   createTask,
+  deleteTask,
   getTaskById,
   listTasks,
   updateTaskStatus

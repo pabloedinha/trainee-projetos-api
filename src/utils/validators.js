@@ -15,6 +15,10 @@ function isInteger(value) {
   return Number.isInteger(value);
 }
 
+function isPercentage(value) {
+  return isInteger(value) && value >= 0 && value <= 100;
+}
+
 function isValidDateString(value) {
   if (!isNonEmptyString(value) || !ISO_DATE_PATTERN.test(value)) {
     return false;
@@ -52,6 +56,23 @@ function validateTaskPayload(payload) {
   );
 }
 
+function validateProjectPayload(payload) {
+  if (!payload || typeof payload !== "object") {
+    return false;
+  }
+
+  return (
+    isNonEmptyString(payload.name) &&
+    isNonEmptyString(payload.client) &&
+    isNonEmptyString(payload.description) &&
+    PROJECT_STATUSES.includes(payload.status) &&
+    isPercentage(payload.progress) &&
+    isValidDateString(payload.dueDate) &&
+    isNonEmptyString(payload.owner) &&
+    PRIORITIES.includes(payload.priority)
+  );
+}
+
 function validateTaskStatusPayload(payload) {
   return Boolean(payload && TASK_STATUSES.includes(payload.status));
 }
@@ -81,6 +102,7 @@ module.exports = {
   PROJECT_STATUSES,
   TASK_STATUSES,
   isValidDateString,
+  validateProjectPayload,
   validateTaskFilters,
   validateTaskPayload,
   validateTaskStatusPayload

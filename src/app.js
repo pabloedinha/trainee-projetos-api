@@ -13,7 +13,7 @@ const app = express();
 
 app.use(
   cors({
-    methods: ["GET", "POST", "PATCH"],
+    methods: ["GET", "POST", "PATCH", "DELETE"],
     allowedHeaders: ["Content-Type", "x-team-token"]
   })
 );
