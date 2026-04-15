@@ -8,7 +8,8 @@
     "progress": 65,
     "dueDate": "2026-04-20",
     "owner": "Mariana Costa",
-    "priority": "Alta"
+    "priority": "Alta",
+    "image": "https://images.unsplash.com/photo-1527689368864-3a821dbccc34?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     "id": 2,
@@ -19,7 +20,8 @@
     "progress": 20,
     "dueDate": "2026-05-10",
     "owner": "Lucas Lima",
-    "priority": "Média"
+    "priority": "Média",
+    "image": "https://images.unsplash.com/photo-1591696205602-2f950c417cb9?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     "id": 3,
@@ -30,7 +32,8 @@
     "progress": 52,
     "dueDate": "2026-04-28",
     "owner": "Beatriz Rocha",
-    "priority": "Alta"
+    "priority": "Alta",
+    "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     "id": 4,
@@ -41,7 +44,8 @@
     "progress": 85,
     "dueDate": "2026-04-15",
     "owner": "Fernanda Alves",
-    "priority": "Média"
+    "priority": "Média",
+    "image": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     "id": 5,
@@ -52,6 +56,79 @@
     "progress": 100,
     "dueDate": "2026-03-30",
     "owner": "Rafael Martins",
-    "priority": "Baixa"
+    "priority": "Baixa",
+    "image": "https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "id": 6,
+    "name": "E-commerce B2B",
+    "client": "Indústria Ômega",
+    "description": "Desenvolvimento de plataforma de vendas exclusiva para distribuidores e atacadistas.",
+    "status": "Em andamento",
+    "progress": 40,
+    "dueDate": "2026-06-15",
+    "owner": "Pablo Garcia",
+    "priority": "Alta",
+    "image": "https://images.unsplash.com/photo-1695654397438-9856b753d83f?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "id": 7,
+    "name": "Integração de Pagamentos",
+    "client": "Fintech Pay",
+    "description": "Implementação de novos gateways de pagamento e integração com PIX.",
+    "status": "Planejamento",
+    "progress": 10,
+    "dueDate": "2026-07-01",
+    "owner": "João Pedro",
+    "priority": "Alta",
+    "image": "https://images.unsplash.com/photo-1509017174183-0b7e0278f1ec?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "id": 8,
+    "name": "App de Logística",
+    "client": "Transportes Rápidos",
+    "description": "Aplicativo mobile para rastreamento de frotas e confirmação de entregas em tempo real.",
+    "status": "Em revisão",
+    "progress": 90,
+    "dueDate": "2026-04-25",
+    "owner": "Fernando Soares",
+    "priority": "Média",
+    "image": "https://images.unsplash.com/photo-1465447142348-e9952c393450?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "id": 9,
+    "name": "Controle de Estoque Inteligente",
+    "client": "Varejo Nacional",
+    "description": "Modernização do sistema de inventário com leitura de código de barras via aplicativo.",
+    "status": "Em andamento",
+    "progress": 60,
+    "dueDate": "2026-05-20",
+    "owner": "Guilherme Beltrame",
+    "priority": "Baixa",
+    "image": "https://images.unsplash.com/photo-1672552226380-486fe900b322?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "id": 10,
+    "name": "Migração para Nuvem",
+    "client": "Banco Delta",
+    "description": "Migração da infraestrutura legada para ambiente AWS visando alta disponibilidade.",
+    "status": "Planejamento",
+    "progress": 5,
+    "dueDate": "2026-08-10",
+    "owner": "Luis Felipe",
+    "priority": "Alta",
+    "image": "https://images.unsplash.com/photo-1506399558188-acca6f8cbf41?q=80&w=1573&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "id": 11,
+    "name": "Redesign Institucional",
+    "client": "EducaTech",
+    "description": "Reformulação completa de UI/UX do portal educacional para melhorar a conversão de leads.",
+    "status": "Concluído",
+    "progress": 100,
+    "dueDate": "2026-04-10",
+    "owner": "Gabrieli Battini",
+    "priority": "Média",
+    "image": "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   }
 ]
