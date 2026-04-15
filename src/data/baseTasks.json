@@ -218,5 +218,203 @@
     "assignee": "Eduardo Neves",
     "dueDate": "2026-04-13",
     "estimatedHours": 5
+  },
+  {
+    "id": 121,
+    "projectId": 6,
+    "title": "Modelagem do banco de dados",
+    "description": "Criar esquema SQL para clientes B2B, tabela de preços e pedidos.",
+    "status": "Concluída",
+    "priority": "Alta",
+    "assignee": "Pablo Garcia",
+    "dueDate": "2026-04-10",
+    "estimatedHours": 12
+  },
+  {
+    "id": 122,
+    "projectId": 6,
+    "title": "Regras de desconto por volume",
+    "description": "Implementar algoritmo que aplica descontos progressivos no carrinho.",
+    "status": "Em andamento",
+    "priority": "Alta",
+    "assignee": "Pablo Garcia",
+    "dueDate": "2026-04-22",
+    "estimatedHours": 15
+  },
+  {
+    "id": 123,
+    "projectId": 6,
+    "title": "Dashboard de pedidos (Admin)",
+    "description": "Interface para distribuidores aprovarem ou rejeitarem pedidos B2B.",
+    "status": "A fazer",
+    "priority": "Média",
+    "assignee": "Carlos Lima",
+    "dueDate": "2026-05-02",
+    "estimatedHours": 20
+  },
+  {
+    "id": 124,
+    "projectId": 7,
+    "title": "Integração API do PIX",
+    "description": "Desenvolver webhook para recebimento e confirmação instantânea do PIX.",
+    "status": "Em andamento",
+    "priority": "Alta",
+    "assignee": "João Pedro",
+    "dueDate": "2026-04-18",
+    "estimatedHours": 18
+  },
+  {
+    "id": 125,
+    "projectId": 7,
+    "title": "Tratamento de transações recusadas",
+    "description": "Criar fluxo de retentativa e notificação via e-mail para cartão recusado.",
+    "status": "A fazer",
+    "priority": "Média",
+    "assignee": "João Pedro",
+    "dueDate": "2026-04-28",
+    "estimatedHours": 8
+  },
+  {
+    "id": 126,
+    "projectId": 7,
+    "title": "Homologação com a Cielo",
+    "description": "Realizar bateria de testes no ambiente sandbox da adquirente.",
+    "status": "Em revisão",
+    "priority": "Média",
+    "assignee": "Marina Freitas",
+    "dueDate": "2026-04-14",
+    "estimatedHours": 6
+  },
+  {
+    "id": 127,
+    "projectId": 8,
+    "title": "Rastreamento em tempo real",
+    "description": "Integrar Google Maps API para mostrar a rota do motorista no app.",
+    "status": "Em andamento",
+    "priority": "Alta",
+    "assignee": "Fernando Soares",
+    "dueDate": "2026-04-20",
+    "estimatedHours": 25
+  },
+  {
+    "id": 128,
+    "projectId": 8,
+    "title": "Assinatura digital de recebimento",
+    "description": "Criar componente canvas para o cliente assinar na tela do tablet.",
+    "status": "Concluída",
+    "priority": "Média",
+    "assignee": "Fernando Soares",
+    "dueDate": "2026-04-05",
+    "estimatedHours": 10
+  },
+  {
+    "id": 129,
+    "projectId": 8,
+    "title": "Sincronização Offline",
+    "description": "Salvar cache local de entregas para quando o motorista estiver sem internet.",
+    "status": "A fazer",
+    "priority": "Alta",
+    "assignee": "Lucas Lima",
+    "dueDate": "2026-05-15",
+    "estimatedHours": 30
+  },
+  {
+    "id": 130,
+    "projectId": 9,
+    "title": "Leitor de código de barras",
+    "description": "Implementar biblioteca QuaggaJS para ler códigos usando a câmera.",
+    "status": "Em andamento",
+    "priority": "Alta",
+    "assignee": "Guilherme Beltrame",
+    "dueDate": "2026-04-26",
+    "estimatedHours": 16
+  },
+  {
+    "id": 131,
+    "projectId": 9,
+    "title": "Alertas de ruptura de estoque",
+    "description": "Disparar notificação no sistema quando um produto atingir o limite mínimo.",
+    "status": "Em revisão",
+    "priority": "Média",
+    "assignee": "Guilherme Beltrame",
+    "dueDate": "2026-04-12",
+    "estimatedHours": 8
+  },
+  {
+    "id": 132,
+    "projectId": 9,
+    "title": "Exportação de balanço em Excel",
+    "description": "Permitir que o gestor baixe o inventário completo em formato .xlsx.",
+    "status": "A fazer",
+    "priority": "Baixa",
+    "assignee": "Ana Souza",
+    "dueDate": "2026-05-05",
+    "estimatedHours": 5
+  },
+  {
+    "id": 133,
+    "projectId": 10,
+    "title": "Provisionamento de VPC e Subnets",
+    "description": "Criar a infraestrutura de rede básica na AWS usando Terraform.",
+    "status": "Concluída",
+    "priority": "Alta",
+    "assignee": "Luis Felipe",
+    "dueDate": "2026-04-02",
+    "estimatedHours": 14
+  },
+  {
+    "id": 134,
+    "projectId": 10,
+    "title": "Migrar banco de dados (RDS)",
+    "description": "Transferir dados do servidor on-premise para a Amazon RDS com zero downtime.",
+    "status": "A fazer",
+    "priority": "Alta",
+    "assignee": "Luis Felipe",
+    "dueDate": "2026-05-20",
+    "estimatedHours": 40
+  },
+  {
+    "id": 135,
+    "projectId": 10,
+    "title": "Pipeline de CI/CD",
+    "description": "Configurar GitHub Actions para deploy automático na nuvem.",
+    "status": "Em andamento",
+    "priority": "Média",
+    "assignee": "Vinicius Araujo",
+    "dueDate": "2026-04-19",
+    "estimatedHours": 12
+  },
+  {
+    "id": 136,
+    "projectId": 11,
+    "title": "Design System no Figma",
+    "description": "Padronizar paleta de cores, tipografia e botões antes de codar.",
+    "status": "Concluída",
+    "priority": "Alta",
+    "assignee": "Gabrieli Battini",
+    "dueDate": "2026-03-25",
+    "estimatedHours": 20
+  },
+  {
+    "id": 137,
+    "projectId": 11,
+    "title": "Animações da Landing Page",
+    "description": "Aplicar microinterações usando Framer Motion nos cards de cursos.",
+    "status": "Em revisão",
+    "priority": "Média",
+    "assignee": "Gabrieli Battini",
+    "dueDate": "2026-04-10",
+    "estimatedHours": 14
+  },
+  {
+    "id": 138,
+    "projectId": 11,
+    "title": "Otimização de Core Web Vitals",
+    "description": "Melhorar as métricas de LCP e CLS compactando imagens para WebP.",
+    "status": "A fazer",
+    "priority": "Alta",
+    "assignee": "Thiago Lopes",
+    "dueDate": "2026-04-24",
+    "estimatedHours": 8
   }
 ]
